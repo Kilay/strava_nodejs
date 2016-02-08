@@ -1,0 +1,9 @@
+data/gears.json
+data/strava_config
+data/gpx/*
+node_modules/*
+public/bower/*
+persist/*
+.idea
+!.gitignore
+!*.sample

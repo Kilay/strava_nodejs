@@ -1,0 +1,530 @@
+<html>
+    <head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Run Dashboard</title>
+        <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="stylesheets/sb-admin-2.css">
+        <link rel="stylesheet" href="stylesheets/run-dashboard.css">
+        <link rel="stylesheet" href="bower/metisMenu/dist/metisMenu.min.css">
+        <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower/angular-loading-bar/build/loading-bar.min.css">
+        <link rel="stylesheet" href="bower/angular-xeditable/dist/css/xeditable.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+        <script src="bower/jquery/dist/jquery.min.js"></script>
+        <script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower/metisMenu/dist/metisMenu.min.js"></script>
+        <script src="javascripts/sb-admin-2.js"></script>
+        <script src="bower/moment/moment.js"></script>
+        <script src="bower/angular/angular.js"></script>
+        <script src="bower/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower/angular-loading-bar/build/loading-bar.min.js"></script>
+        <script src="bower/ng-file-upload/angular-file-upload-shim.min.js"></script>
+        <script src="bower/ng-file-upload/angular-file-upload.min.js"></script>
+        <script src="bower/angular-xeditable/dist/js/xeditable.js"></script>
+        <script src="javascripts/angularApp.js"></script>
+    </head>
+    <body ng-app="strava">
+        <div id="wrapper">
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/home">Run Dashboard</a>
+                </div>
+                <!-- /.navbar-header -->
+
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-messages">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <strong>John Smith</strong>
+                                        <span class="pull-right text-muted">
+                                            <em>Yesterday</em>
+                                        </span>
+                                    </div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <strong>John Smith</strong>
+                                        <span class="pull-right text-muted">
+                                            <em>Yesterday</em>
+                                        </span>
+                                    </div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <strong>John Smith</strong>
+                                        <span class="pull-right text-muted">
+                                            <em>Yesterday</em>
+                                        </span>
+                                    </div>
+                                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>Read All Messages</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-messages -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-tasks">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p>
+                                            <strong>Task 1</strong>
+                                            <span class="pull-right text-muted">40% Complete</span>
+                                        </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                                <span class="sr-only">40% Complete (success)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p>
+                                            <strong>Task 2</strong>
+                                            <span class="pull-right text-muted">20% Complete</span>
+                                        </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                                <span class="sr-only">20% Complete</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p>
+                                            <strong>Task 3</strong>
+                                            <span class="pull-right text-muted">60% Complete</span>
+                                        </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                                <span class="sr-only">60% Complete (warning)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <p>
+                                            <strong>Task 4</strong>
+                                            <span class="pull-right text-muted">80% Complete</span>
+                                        </p>
+                                        <div class="progress progress-striped active">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                                <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Tasks</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-tasks -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <li class="dropdown" ui-view="alerts">
+
+                        <!-- /.dropdown-alerts -->
+                    </li>
+                    <!-- /.dropdown -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <!-- /.dropdown-user -->
+                    </li>
+                    <!-- /.dropdown -->
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li>
+                                <a href="#/home"><i class="fa fa-dashboard fa-fw"></i> Dashboard<span class="fa arrow"></span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-heartbeat fa-fw"></i> Strava<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#/strava/list/1">View activities</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/strava/upload">Upload activity</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/strava/auto/upload">Auto upload activities</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <!-- Page Content -->
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12" >
+                            <ui-view></ui-view>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        </div>
+
+        <script type="text/ng-template" id="/stravastats">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Welcome home</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-rocket fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{stats.recent_run_totals.count}}</div>
+                                    <div>Recent runs (last 4 weeks) !</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/strava/list/1">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-rocket fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{stats.ytd_run_totals.count}}</div>
+                                    <div>Year to date runs !</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/strava/list/1">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-rocket fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{stats.all_run_totals.count}}</div>
+                                    <div>Total runs !</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/strava/list/1">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-road fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{stats.recent_run_totals.distance/1000 | number:2}}</div>
+                                    <div>Kilometers (last 4 weeks) !</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/strava/list/1">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-road fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{stats.ytd_run_totals.distance/1000 | number:2}}</div>
+                                    <div>Year to date kilometers !</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/strava/list/1">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-road fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">{{stats.all_run_totals.distance/1000 | number:2}}</div>
+                                    <div>Total kilometers !</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#/strava/list/1">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="/stravalist">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Strava activities</h1>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <nav>
+                        <ul class="pager">
+                            <li><a href="#/strava/list/{{page-1}}">Previous</a></li>
+                            <li><a href="#/strava/list/{{page+1}}">Next</a></li>
+                        </ul>
+                    </nav>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Distance</th>
+                                <th>Time</th>
+                                <th>Link</th>
+                                <th>Kudos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class='clickableRow' data-url='#/strava/activity/{{activity.id}}' ng-repeat="activity in activities | orderBy:'-start_date_local'" row-clickable>
+                                <td>{{activity.start_date_local | date:"dd/MM/yyyy HH:mm"}}</td>
+                                <td>{{activity.name}}</td>
+                                <td>{{activity.distance/1000 | number:2}} km</td>
+                                <td>{{activity.elapsed_time.hours()}}h{{activity.elapsed_time.minutes()}}m{{activity.elapsed_time.seconds()}}s</td>
+                                <td><a href="#/activity/{{activity.id}}" >Link</a></td>
+                                <td>{{activity.kudos_count}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav>
+                        <ul class="pager">
+                            <li><a href="#/strava/list/{{page-1}}">Previous</a></li>
+                            <li><a href="#/strava/list/{{page+1}}">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="/activity">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header"><a href="#" editable-text="activity.name" onbeforesave="updateActivity('name', $data)">{{ activity.name || 'empty' }}</a></h1>
+                </div>
+            </div>
+            <div>
+                Distance : {{activity.distance/1000 | number:2}}<br />
+                Allure moyenne : {{activity.average_speed | number:2}} m/s<br />
+                Allure moyenne : {{activity.average_speed*3.6 | number:2}} km/h<br />
+                Temps de déplacement/Temps total : {{activity.moving_time.hours()}}h{{activity.moving_time.minutes()}}m{{activity.moving_time.seconds()}}s / {{activity.elapsed_time.hours()}}h{{activity.elapsed_time.minutes()}}m{{activity.elapsed_time.seconds()}}s<br />
+                Equipement :
+                <a href="#" editable-select="activity.gear.id" onshow="getGears()" e-ng-options="gear.id as gear.name for gear in gears" onbeforesave="updateActivity('gear_id', $data)">
+                    {{activity.gear.name}}
+                </a><br />
+                Type de course : {{activity_types[activity.workout_type].name}}
+                <br /><br />
+                <a href="https://www.strava.com/activities/{{activity.id}}" target="_blank">Lien Strava</a>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="/stravafriends">
+            <li ng-repeat="friend in friends">
+                <a href="#/strava/stats/{{friend.id}}">{{friend.firstname}} {{friend.lastname}}</a>
+            </li>
+        </script>
+
+        <script type="text/ng-template" id="/strava/upload">
+            <div class="row">
+                <div class="alert alert-{{alert.type}} alert-dismissible" role="alert" ng-repeat="alert in alerts">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <span ng-bind-html="alert.title"></span><br />
+                    <span ng-bind-html="alert.message"></span>
+                </div>
+                <div ng-file-drop ng-file-select ng-model="files" class="drop-box" drag-over-class="dragover" ng-multiple="false" >Drop activity here or click to upload</div>
+                <div ng-no-file-drop>File Drag/Drop is not supported for this browser</div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{dynamic}}" aria-valuemin="0" aria-valuemax="100" style="width: {{dynamic}}%;">
+                        {{dynamic}}%
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="/strava/auto/upload">
+            <div class="row">
+                <div class="center-block alert alert-{{alert.type}} alert-dismissible" role="alert" ng-repeat="alert in stravaUploads.alerts">
+                    <button type="button" class="close" data-dismiss="alert" data-auto-dismiss="5" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <span ng-bind-html="alert.title"></span><br />
+                    <span ng-bind-html="alert.message"></span>
+                </div>
+                Auto upload progress :
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{(100/stravaUploads.gpxToUpload)*stravaUploads.gpxUploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: {{(100/stravaUploads.gpxToUpload)*stravaUploads.gpxUploaded}}%;">
+                        {{stravaUploads.gpxUploaded}}/{{stravaUploads.gpxToUpload}}
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="/alerts">
+            <a class="dropdown-toggle" data-toggle="dropdown" ng-click="markNotificationsAsRead()">
+                <span class="badge {{classNotification}}">{{filteredNotifications.length}}</span><i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-alerts" ng-href='#here' ng-click="markNotificationsAsRead()">
+                <li ng-repeat-start='notification in notifications'></li>
+                <li>
+                    <a href="#">
+                        <div>
+                            <i class="fa {{notification.icon}} fa-fw"></i> <span ng-bind-html="notification.title"></span><br />
+                            <span ng-bind-html="notification.message"></span>
+                            <span class="pull-right text-muted small">4 minutes ago</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="divider" ng-repeat-end></li>
+                <li ng-repeat='notification in filteredNotifications = (notifications | filter:{read: true})'>
+                </li>
+            </ul>
+        </script>
+        
+        <script type="text/ng-template" id="/stravagears">
+            <a href="#" editable-select="user.group" onshow="getGears()" e-ng-options="gear.id as gear.name for gear in gears">
+                test
+            </a>
+        </script>
+    </body>
+</html>
